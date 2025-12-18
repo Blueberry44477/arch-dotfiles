@@ -1,0 +1,30 @@
+{
+    "include": ["~/.config/waybar/modules.jsonc"],
+    
+    "position": "top",
+    "margin-top" : 2,
+    "margin-left": 10,
+    "margin-right": 10,
+    "height" : 28,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/language",
+        "disk"
+    ],
+
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "battery",
+        "memory",
+        "network",
+        "temperature",
+        "clock",
+        "custom/exit"
+    ]
+}
