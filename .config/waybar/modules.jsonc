@@ -27,17 +27,17 @@
     },
 
     "cpu": {
-        "format": " {usage}%",
-        "tooltip": false
+        "format": " |{usage}%",
+        "tooltip": true
     },
 
     "memory": {
-        "format": " {}%"
+        "format": "|{}%"
     },
 
     "temperature": {
         "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
+        "format": "{icon}|{temperatureC}°C",
         "format-icons": ["", "", ""]
     },
 
@@ -47,7 +47,7 @@
             "critical": 15
         },
 
-        "format": "{icon} {capacity}%",
+        "format": "{icon} |{capacity}%",
         "format-full": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
@@ -56,7 +56,7 @@
     },
 
     "network": {
-        "format-wifi": "  {signalStrength}%",
+        "format-wifi": " |{signalStrength}%",
         "format-ethernet": "{ifname} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -65,19 +65,19 @@
     },
 
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon}  {volume}%",
-        "format-bluetooth-muted": " {volume}%",
-        "format-muted": " ",
+        "format": "{icon}|{volume}%",
+        "format-bluetooth": "{icon}||{volume}%",
+        "format-bluetooth-muted": "|{volume}%",
+        "format-muted": "|{volume}%",
         "format-icons": {
-            "headphone": "",
+            "headphone": "",
             "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
-            },
+            "default": ["L", "M", "H"]
+        },
         "on-click": "pavucontrol"
     },
 
@@ -106,7 +106,7 @@
     },
 
     "backlight": {
-        "format": " {percent}%",
+        "format": "|{percent}%",
         "device": "intel_backlight",
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-",
@@ -114,7 +114,7 @@
     },
 
     "mpd": {
-        "format": "{stateIcon}{consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+        "format": "{stateIcon}{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
         // "format": "{title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
         // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
         "format-stopped": " Stopped",
@@ -130,7 +130,7 @@
             "on": " "
         },
         "single-icons": {
-            "on": "1 "
+            "on": "S "
         },
         "state-icons": {
             "paused": " ",
@@ -358,22 +358,6 @@
 //         "tooltip-format-disconnected": "Disconnected",
 //         "max-length": 50,
 //         "on-click": "nm-connection-editor"
-//     },
-
-//     // Battery
-//     "battery": {
-//         "states": {
-//             // "good": 95,
-//             "warning": 30,
-//             "critical": 15
-//         },
-//         "format": "{icon}   {capacity}%",
-//         "format-charging": "  {capacity}%",
-//         "format-plugged": "  {capacity}%",
-//         "format-alt": "{icon}  {time}",
-//         // "format-good": "", // An empty format will hide the module
-//         // "format-full": "",
-//         "format-icons": [" ", " ", " ", " ", " "]
 //     },
 
 //     // Pulseaudio
