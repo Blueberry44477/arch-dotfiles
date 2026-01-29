@@ -48,8 +48,8 @@
         },
 
         "format": "{icon} |{capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-full": "{icon} |{capacity}%",
+        "format-charging": "|{capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
@@ -57,8 +57,8 @@
 
     "network": {
         "format-wifi": " |{signalStrength}%",
-        "format-ethernet": "{ifname} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-ethernet": "||",
+        "tooltip-format": "{essid}|{ifname}|{gwaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "N/C",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
